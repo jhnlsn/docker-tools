@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+# Shows log output for a matching container and removes _health output
+docker logs -f $(docker ps -a -q --filter name=$1) |grep -v _health
